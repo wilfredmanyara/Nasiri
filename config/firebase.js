@@ -6,7 +6,7 @@ import {getAuth} from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBmiG8b1ZpTijwFkNl6mHRsD5Pdt2vyaHQ",
+  apiKey: "FIREBASE_API",
   authDomain: "mental-health-bbd32.firebaseapp.com",
   projectId: "mental-health-bbd32",
   storageBucket: "mental-health-bbd32.appspot.com",
