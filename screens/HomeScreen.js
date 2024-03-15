@@ -10,10 +10,16 @@ export default function HomeScreen() {
 
   const handleLogout = async () => {
     await signOut(auth);
+    // Navigate to login/signup screen after logout
+    navigation.navigate('Login');
   };
 
   const navigateToMoodEntry = () => {
     navigation.navigate('MoodEntry');
+  };
+
+  const navigateToChatPlartform = () => {
+    navigation.navigate('ChatPlartform');
   };
 
   const navigateToAnalysisResult = () => {
@@ -22,6 +28,10 @@ export default function HomeScreen() {
 
   const navigateToCommunity = () => {
     navigation.navigate('Community');
+  };
+
+  const navigateToLearningProgram = () => {
+    navigation.navigate('LearningProgram');
   };
 
   return (
@@ -39,12 +49,20 @@ export default function HomeScreen() {
         <Text style={{ fontSize: 16, color: 'blue' }}>Go to Mood Entry</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity onPress={navigateToMoodEntry} style={{ marginTop: 20 }}>
+        <Text style={{ fontSize: 16, color: 'blue' }}>Go to Chat Plartform</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity onPress={navigateToAnalysisResult} style={{ marginTop: 20 }}>
         <Text style={{ fontSize: 16, color: 'green' }}>Go to Analysis Result</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={navigateToCommunity} style={{ marginTop: 20 }}>
         <Text style={{ fontSize: 16, color: 'orange' }}>Go to Community</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={navigateToLearningProgram} style={{ marginTop: 20 }}>
+        <Text style={{ fontSize: 16, color: 'purple' }}>Go to Learning Program</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
